@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "Waste Food Management",
+    "_postman_id": "6586b0f3-c8fa-4c66-b126-c1b77a31d878",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/auth/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["auth", "login"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"donor@example.com\",\"password\":\"password123\"}"
+        }
+      }
+    }
+  ]
+}

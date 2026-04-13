@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+.env
+.env.local
+.env.production
+.env.development
+.venv
+__pycache__
+.pytest_cache
+*.log
+apps/web/.vite
+apps/api-gateway/build
+infra/docker/data

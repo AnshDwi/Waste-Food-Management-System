@@ -1,0 +1,31 @@
+import { api } from '../../lib/api';
+
+export const platformApi = {
+  getAnalyticsSummary: async () => (await api.get('/analytics/summary')).data.data,
+  getAnalyticsTrends: async () => (await api.get('/analytics/trends')).data.data,
+  getDonations: async () => (await api.get('/donations')).data.data,
+  createDonation: async (payload: unknown) => (await api.post('/donations', payload)).data.data,
+  getNgos: async () => (await api.get('/ngos')).data.data,
+  createNgo: async (payload: unknown) => (await api.post('/ngos', payload)).data.data,
+  updateNgo: async (id: string, payload: unknown) => (await api.put(`/ngos/${id}`, payload)).data.data,
+  deleteNgo: async (id: string) => (await api.delete(`/ngos/${id}`)).data.data,
+  getDrivers: async () => (await api.get('/logistics/drivers')).data.data,
+  getDeliveries: async () => (await api.get('/logistics/deliveries')).data.data,
+  assignDriver: async (payload: unknown) => (await api.post('/logistics/assign-driver', payload)).data.data,
+  updateDeliveryStatus: async (id: string, payload: unknown) => (await api.patch(`/logistics/deliveries/${id}/status`, payload)).data.data,
+  startDeliveryTracking: async (id: string) => (await api.post(`/logistics/deliveries/${id}/start-tracking`)).data.data,
+  updateDriverLocation: async (id: string, payload: unknown) => (await api.patch(`/logistics/drivers/${id}/location`, payload)).data.data,
+  getMapData: async () => (await api.get('/logistics/map-data')).data.data,
+  getAdminOverview: async () => (await api.get('/admin/overview')).data.data,
+  approveNgoVerification: async () => (await api.post('/admin/ngo-verifications/approve')).data.data,
+  escalateFraudSignal: async () => (await api.post('/admin/fraud/escalate')).data.data,
+  exportComplianceReport: async () => (await api.get('/admin/compliance-report', { responseType: 'blob' })).data,
+  getAuditLogs: async () => (await api.get('/audit-logs')).data.data,
+  getControlRoom: async () => (await api.get('/intelligence/control-room')).data.data,
+  getDigitalTwin: async () => (await api.get('/intelligence/digital-twin')).data.data,
+  getPredictiveFailures: async () => (await api.get('/intelligence/predictive-failures')).data.data,
+  getGlobalOptimization: async () => (await api.get('/intelligence/global-optimization')).data.data,
+  getAssistant: async () => (await api.get('/intelligence/assistant')).data.data,
+  getImpact: async () => (await api.get('/intelligence/impact')).data.data,
+  getLeaderboards: async () => (await api.get('/gamification/leaderboards')).data.data
+};
