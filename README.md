@@ -1,6 +1,6 @@
 # Waste Food Management System
 
-Production-ready ERP-style platform for connecting food donors, NGOs, volunteers, and administrators to reduce food waste at scale.
+ERP-style platform for connecting food donors, NGOs, volunteers, and administrators to reduce food waste at scale.
 
 ## Platform Scope
 
