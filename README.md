@@ -3,6 +3,7 @@
 ERP-style platform for connecting food donors, NGOs, volunteers, and administrators to reduce food waste at scale.
 
 🔗 Live Demo: https://waste-food-management-system-gules.vercel.app/app
+
 🔗 Backend API: https://waste-food-management-system-uvw7.onrender.com
 
 ## Platform Scope
